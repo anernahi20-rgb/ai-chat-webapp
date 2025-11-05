@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1><i class="fas fa-robot"></i> AI Chat Assistant</h1>
+            <p>Powered by Groq API</p>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message ai-message">
+                <div class="message-content">
+                    <i class="fas fa-robot message-icon"></i>
+                    <div class="message-text">
+                        Hello! I'm your AI assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <div class="input-group">
+                <input type="text" id="userInput" placeholder="Type your message here..." maxlength="1000">
+                <button id="sendButton" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="api-key-container">
+                <input type="password" id="apiKey" placeholder="Enter your Groq API key (optional - uses demo mode if empty)">
+                <small>Get your free API key from <a href="https://console.groq.com/keys" target="_blank">Groq Console</a></small>
+            </div>
+        </div>
+        
+        <div class="typing-indicator" id="typingIndicator" style="display: none;">
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <span>AI is thinking...</span>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Built with ❤️ using GitHub Actions | <a href="https://github.com/anernahi20-rgb/ai-chat-webapp" target="_blank">View Source</a></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
