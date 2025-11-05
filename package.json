@@ -1,0 +1,47 @@
+{
+  "name": "ai-chat-webapp",
+  "version": "1.0.0",
+  "description": "A lightweight AI chat web application with GitHub Actions deployment",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -o",
+    "dev": "npx http-server . -p 3000 -o -c-1",
+    "build": "echo 'Building for production...' && mkdir -p dist && cp index.html styles.css script.js dist/",
+    "test": "node -c script.js && echo 'JavaScript syntax validation passed!'",
+    "deploy": "echo 'Deployment handled by GitHub Actions'",
+    "lint": "echo 'Linting HTML, CSS, and JavaScript files...' && node -c script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anernahi20-rgb/ai-chat-webapp.git"
+  },
+  "keywords": [
+    "ai",
+    "chat",
+    "groq",
+    "llama",
+    "web-app",
+    "javascript",
+    "github-actions",
+    "github-pages",
+    "responsive",
+    "vanilla-js"
+  ],
+  "author": "anernahi20-rgb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anernahi20-rgb/ai-chat-webapp/issues"
+  },
+  "homepage": "https://anernahi20-rgb.github.io/ai-chat-webapp/",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "not dead"
+  ]
+}
